@@ -39,6 +39,6 @@
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>
+        </CollectionView>        
     </RefreshView>
 </ContentPage>

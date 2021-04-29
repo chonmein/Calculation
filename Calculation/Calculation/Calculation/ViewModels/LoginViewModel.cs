@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Calculation.ViewModels
@@ -12,13 +13,12 @@ namespace Calculation.ViewModels
 
         public LoginViewModel()
         {
-            LoginCommand = new Command(OnLoginClicked);
+            LoginCommand = new Command<string>(OnLoginClicked);
         }
-
-        private async void OnLoginClicked(object obj)
+        private async void OnLoginClicked(string obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
-        }
+            await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
+        }        
     }
 }

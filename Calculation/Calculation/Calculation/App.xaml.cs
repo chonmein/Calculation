@@ -14,11 +14,12 @@ namespace Calculation
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new AppShell();            
         }
 
         protected override void OnStart()
         {
+            Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
 
         protected override void OnSleep()
