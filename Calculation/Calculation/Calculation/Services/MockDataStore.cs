@@ -54,6 +54,7 @@ namespace Calculation.Services
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
+            Console.WriteLine("TEST01-1");
             return await Task.FromResult(items);
         }
     }
